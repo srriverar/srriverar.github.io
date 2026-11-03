@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Observatorio del SIN · agua, precio y El Niño</title>
+<meta name="description" content="Observatorio del Sistema Interconectado Nacional de Colombia: XM (Bienda) + ONI NOAA/CPC. Acceso abierto.">
+<style>
+  html,body{margin:0;height:100%;background:#f4f7fb;color:#12203a;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .bar{height:54px;display:flex;align-items:center;gap:14px;padding:0 16px;
+    background:#003399;color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.18);position:relative;z-index:5}
+  .bar a{color:#fff;text-decoration:none}
+  .back{font-size:.85rem;opacity:.85;border:1px solid rgba(255,255,255,.35);
+    border-radius:7px;padding:5px 9px}
+  .back:hover{opacity:1;background:rgba(255,255,255,.12)}
+  .ttl{font-size:.95rem;font-weight:600;letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ttl small{display:block;font-weight:400;font-size:.72rem;opacity:.75;letter-spacing:.04em;text-transform:uppercase}
+  .spacer{flex:1}
+  .ext{font-size:.8rem;background:#fff;color:#003399;font-weight:600;
+    border-radius:7px;padding:6px 11px}
+  .ext:hover{background:#dfe9fb}
+  .frame{display:block;width:100%;border:0;height:calc(100vh - 54px)}
+  .fallback{max-width:640px;margin:80px auto;padding:26px;background:#fff;border:1px solid #dfe6ef;
+    border-radius:14px;text-align:center;font-size:.95rem;line-height:1.6}
+  .fallback a{color:#003399;font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <a class="back" href="../">← Portada</a>
+  <div class="ttl">
+    Observatorio del SIN en tiempo real
+    <small>XM · NOAA/CPC · 212 celdas de ETL</small>
+  </div>
+  <div class="spacer"></div>
+  <a class="ext" href="https://dashboard-sin-nodal.streamlit.app" target="_blank" rel="noopener">Abrir aparte ↗</a>
+</div>
+
+<iframe class="frame"
+        src="https://dashboard-sin-nodal.streamlit.app/?embed=true"
+        title="Observatorio del SIN"
+        allow="clipboard-write; fullscreen"
+        referrerpolicy="strict-origin-when-cross-origin"
+        loading="eager"></iframe>
+
+<noscript>
+  <div class="fallback">
+    Necesitas JavaScript para ver la aplicación embebida.
+    <a href="https://dashboard-sin-nodal.streamlit.app">Ábrela directamente</a>.
+  </div>
+</noscript>
+
+</body>
+</html>

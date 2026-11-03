@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visor de congestión nodal del SIN</title>
+<meta name="description" content="Visor de congestión del Sistema Interconectado Nacional de Colombia: DC-OPF de 7 nodos, escenarios ENSO y capa geoespacial OpenStreetMap.">
+<style>
+  html,body{margin:0;height:100%;background:#f7f2e8;color:#12203a;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .bar{height:54px;display:flex;align-items:center;gap:14px;padding:0 16px;
+    background:#12203a;color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);position:relative;z-index:5}
+  .bar a{color:#fff;text-decoration:none}
+  .back{font-size:.85rem;opacity:.85;border:1px solid rgba(255,255,255,.35);
+    border-radius:7px;padding:5px 9px}
+  .back:hover{opacity:1;background:rgba(255,255,255,.12)}
+  .ttl{font-size:.95rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ttl small{display:block;font-weight:400;font-size:.72rem;opacity:.7;letter-spacing:.04em;text-transform:uppercase}
+  .spacer{flex:1}
+  .ext{font-size:.8rem;background:#c8871a;color:#fff;font-weight:600;
+    border-radius:7px;padding:6px 11px}
+  .ext:hover{background:#a96f11}
+  .frame{display:block;width:100%;border:0;height:calc(100vh - 54px)}
+  .fallback{max-width:640px;margin:80px auto;padding:26px;background:#fff;border:1px solid #e3d9c6;
+    border-radius:14px;text-align:center;font-size:.95rem;line-height:1.6}
+  .fallback a{color:#8a5b08;font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <a class="back" href="../">← Portada</a>
+  <div class="ttl">
+    Visor de congestión nodal
+    <small>DC-OPF 7 nodos · HiGHS · ENSO · OpenStreetMap</small>
+  </div>
+  <div class="spacer"></div>
+  <a class="ext" href="https://colombiacongestionv2.streamlit.app" target="_blank" rel="noopener">Abrir aparte ↗</a>
+</div>
+
+<iframe class="frame"
+        src="https://colombiacongestionv2.streamlit.app/?embed=true"
+        title="Visor de congestión nodal del SIN"
+        allow="clipboard-write; fullscreen"
+        referrerpolicy="strict-origin-when-cross-origin"
+        loading="eager"></iframe>
+
+<noscript>
+  <div class="fallback">
+    Necesitas JavaScript para ver la aplicación embebida.
+    <a href="https://colombiacongestionv2.streamlit.app">Ábrela directamente</a>.
+  </div>
+</noscript>
+
+</body>
+</html>
